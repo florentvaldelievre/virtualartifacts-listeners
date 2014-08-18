@@ -9,17 +9,17 @@ This plugin allows your app to listen to some URLs and schemes. This is for Andr
 You are in your favourite browser and you want your app to appear in the 'Complete action using' list when clicking on a link like <a href="www.example.com">test link</a>
 Your app will also appear in the 'share' by defining the mimeType you want to listen to.
 
-
 ## Installation
 
 ###  Automatically (CLI / Plugman)
 
 listeners is compatible with Cordova Plugman. Replace the variables according to your needs
 
-cordova plugin add https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin.git --variable MIMETYPE_1=image/* --variable MIMETYPE_2=video/* --variable HOST_1=www.example.com --variable HOST_2=example.com --variable SCHEME_1=http --variable SCHEME_2=https --variable PATH_PATTERN=.*
+cordova plugin add https://github.com/florentvaldelievre/virtualartifacts-listeners.git --variable MIMETYPE_1=image/* --variable MIMETYPE_2=video/* --variable HOST_1=www.example.com --variable HOST_2=example.com --variable SCHEME_1=http --variable SCHEME_2=https --variable PATH_PATTERN=.*
 
 ###  PhoneGap Build
 
+```xml
 <gap:plugin name="com.virtualartifacts.listeners">
   <param name="MIMETYPE_1" value="image/*" />
   <param name="MIMETYPE_2" value="video/*" />
@@ -29,6 +29,7 @@ cordova plugin add https://github.com/EddyVerbruggen/LaunchMyApp-PhoneGap-Plugin
   <param name="SCHEME_2" value="https" />        
   <param name="PATH_PATTERN" value=".*" />     
 </gap:plugin>
+```
 
 ## License
 
