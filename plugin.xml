@@ -14,34 +14,37 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
 
-    <preference name="MIMETYPE_1" />
-    <preference name="MIMETYPE_2" />
-    <preference name="HOST_1" />
-    <preference name="HOST_2" />  
-    <preference name="SCHEME_1" />
-    <preference name="SCHEME_2" /> 
-    <preference name="PATH_PATTERN" />
+
 
 
     <platform name="android">
-    <config-file target="AndroidManifest.xml" parent="/*/application/activity">
-        <intent-filter>
-            <action android:name="android.intent.action.SEND" />
-            <category android:name="android.intent.category.DEFAULT" />
-            <data android:mimeType="$MIMETYPE_1" />
-            <data android:mimeType="$MIMETYPE_2" />
-        </intent-filter>
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.DEFAULT" />
-            <category android:name="android.intent.category.BROWSABLE" />
-            <data android:host="$HOST_1" />
-            <data android:host="$HOST_2" />
-            <data android:scheme="$SCHEME_1" />
-            <data android:scheme="$SCHEME_2" />
-            <data android:pathPattern="$PATH_PATTERN" />
-        </intent-filter>
-    </config-file>
+   
+        <preference name="MIMETYPE_1" />
+        <preference name="MIMETYPE_2" />
+        <preference name="HOST_1" />
+        <preference name="HOST_2" />  
+        <preference name="SCHEME_1" />
+        <preference name="SCHEME_2" /> 
+        <preference name="PATH_PATTERN" />
+    
+        <config-file target="AndroidManifest.xml" parent="/*/application/activity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="$MIMETYPE_1" />
+                <data android:mimeType="$MIMETYPE_2" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="$HOST_1" />
+                <data android:host="$HOST_2" />
+                <data android:scheme="$SCHEME_1" />
+                <data android:scheme="$SCHEME_2" />
+                <data android:pathPattern="$PATH_PATTERN" />
+            </intent-filter>
+        </config-file>
     </platform>
 
 </plugin>
